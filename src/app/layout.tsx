@@ -5,7 +5,8 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Jonatas Eduardo | Desenvolvedor Fullstack",
-  description: "Portfólio de Jonatas Eduardo — desenvolvedor fullstack com foco em aplicações web modernas, escaláveis e com ótima experiência de usuário.",
+  description:
+    "Portfólio de Jonatas Eduardo — desenvolvedor fullstack com foco em aplicações web modernas, escaláveis e com ótima experiência de usuário.",
   keywords: [
     "Jonatas Eduardo",
     "Desenvolvedor Fullstack",
@@ -17,13 +18,14 @@ export const metadata: Metadata = {
     "Desenvolvimento Web",
     "API REST",
     "Frontend",
-    "Backend"
+    "Backend",
   ],
   authors: [{ name: "Jonatas Eduardo" }],
   creator: "Jonatas Eduardo",
   openGraph: {
     title: "Jonatas Eduardo | Desenvolvedor Fullstack",
-    description: "Conheça o portfólio de Jonatas Eduardo — desenvolvedor fullstack especializado em tecnologias modernas como React, Next.js e Node.js.",
+    description:
+      "Conheça o portfólio de Jonatas Eduardo — desenvolvedor fullstack especializado em tecnologias modernas como React, Next.js e Node.js.",
     siteName: "Portfólio de Jonatass Eduardo",
     type: "website",
     locale: "pt_BR",

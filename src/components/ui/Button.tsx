@@ -69,9 +69,9 @@ export function SocialButton({ href, icon, label, size }: LinkButtonProps) {
   )
 }
 
-export function ProjectButton ({href, label, icon}: LinkButtonProps) {
+export function ProjectButton({ href, label, icon }: LinkButtonProps) {
   const Icon = icon
-  return(
+  return (
     <Link href={href}>
       <Icon />
       <span>{label}</span>
