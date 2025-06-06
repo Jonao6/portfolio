@@ -1,0 +1,21 @@
+.link {
+  position: relative;
+  display: inline-block;
+  transition: $F5F5F5 0.3s ease;
+  gap: 1em;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #A6A6A6;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
