@@ -9,3 +9,8 @@ export interface Technology {
 export interface Categories {
   [category: string]: Technology[]
 }
+
+export type About = {
+  titulo: string
+  paragrafos: string[]
+}
