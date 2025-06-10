@@ -3,22 +3,20 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { BsArrowUpRightCircleFill } from "react-icons/bs"
 import { FaSquareGithub } from "react-icons/fa6"
-
-interface ImageProps {
-  image: string
-  title: string
-  url: string
-  demo: string
-}
-
-export default function ImageHover({ image, title, url, demo }: ImageProps) {
+import { ProjectImageProps } from "@/types/Project"
+export default function ImageHover({
+  image,
+  title,
+  url,
+  demo,
+}: ProjectImageProps) {
   const router = useRouter()
   return (
-    <div className="relative group w-full max-h-full overflow-hidden rounded-lg">
+    <div className="relative group w-full max-h-full overflow-hidden rounded-3xl">
       <Image
         alt={title}
         src={image}
-        width={700}
+        width={800}
         height={450}
         className="rounded-3xl w-full h-full object-cover transition duration-300 group-hover:scale-105"
       />

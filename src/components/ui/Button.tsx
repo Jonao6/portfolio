@@ -1,16 +1,5 @@
 import Link from "next/link"
-import { IconType } from "react-icons"
-
-export interface ButtonProps {
-  label: string
-  icon: IconType
-  options?: React.AnchorHTMLAttributes<HTMLAnchorElement>
-  size?: string
-}
-
-export interface LinkButtonProps extends ButtonProps {
-  href: string
-}
+import { LinkButtonProps } from "@/types/Button"
 
 export function HeroButton({
   label,
@@ -23,7 +12,6 @@ export function HeroButton({
   return (
     <Link
       href={href}
-      target="_blank"
       rel="noopener noreferrer"
       className="group relative inline-flex items-center justify-center overflow-hidden bg-white px-12 py-2.5 font-normal font-sans text-black shadow-md transition duration-300 ease-out rounded-4xl"
       aria-label={label}
@@ -59,22 +47,12 @@ export function SocialButton({ href, icon, label, size }: LinkButtonProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-row items-center justify-center gap-5 px-5 h-10 border border-gray-300 rounded-3xl text-white  transition-colors delay-75 duration-200 ease-in-out scale-105 hover:bg-white hover:text-black"
+      className="flex flex-row items-center justify-center gap-5 px-5 h-10 border border-gray-300 rounded-3xl text-white  transition-colors delay-75 duration-150 ease-in-out scale-105 hover:bg-white hover:text-black"
     >
       <Icon className="w-5 h-5" />
       <span className={`${size ? size : "text-sm"} font-sans font-normal`}>
         {label}
       </span>
-    </Link>
-  )
-}
-
-export function ProjectButton({ href, label, icon }: LinkButtonProps) {
-  const Icon = icon
-  return (
-    <Link href={href}>
-      <Icon />
-      <span>{label}</span>
     </Link>
   )
 }

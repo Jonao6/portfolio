@@ -1,11 +1,12 @@
+import { LinkButtonProps } from "@/types/Button"
 import {
-  FaLinkedin,
-  FaGithub,
   FaDownload,
-  FaTwitter,
+  FaGithub,
   FaInstagram,
+  FaLinkedin,
+  FaTwitter,
 } from "react-icons/fa6"
-import { SocialButton, LinkButtonProps, HeroButton } from "./ui/Button"
+import { HeroButton, SocialButton } from "../ui/Button"
 const socialLinks: Record<string, LinkButtonProps> = {
   linkedin: {
     href: process.env.LINKEDIN_URL ?? "#",
@@ -31,18 +32,18 @@ const socialLinks: Record<string, LinkButtonProps> = {
 
 export default function ContactsSection() {
   return (
-    <section className="flex flex-col pt-12 w-full h-full gap-14">
+    <section className="flex flex-col pt-12 w-full gap-14" id="contato">
       <h1 className="text-left text-6xl text-neutral-100 font-extrabold font-mono">
         Contato
       </h1>
       <div className="flex flex-col justify-center items-start h-full gap-14 py-20 px-16">
         <div className="flex flex-wrap">
           <h2 className="w-full font-mono font-bold text-3xl text-neutral-100 tracking-widest">
-            Jonatas Eduardo
+            Jonatas Eduardo Heleno Fernandes dos Santos
           </h2>
           <div className="mt-14 mb-20">
             <div className="flex flex-col items-start">
-              <span className="font-mono font-normal text-lg text-white">{`Email`}</span>
+              <span className="font-mono font-normal text- text-white">{`Email`}</span>
               <span className="font-mono font-bold text-xl text-white">
                 {process.env.EMAIL_URL}
               </span>
@@ -55,7 +56,7 @@ export default function ContactsSection() {
               </span>
             </div>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-20 mt-8 w-full">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-20 mt-8 w-full">
             <SocialButton
               href={socialLinks.linkedin.href}
               label={socialLinks.linkedin.label}

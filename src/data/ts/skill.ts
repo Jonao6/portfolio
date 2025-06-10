@@ -4,7 +4,6 @@ import {
   DiMongodb,
   DiReact,
 } from "react-icons/di"
-import { IconType } from "react-icons"
 import {
   TbBrandMysql,
   TbBrandNextjs,
@@ -15,20 +14,8 @@ import { SiGithubactions, SiPostgresql, SiZod } from "react-icons/si"
 import { FaDocker, FaFigma, FaGit } from "react-icons/fa6"
 import { RiTailwindCssFill, RiVercelLine } from "react-icons/ri"
 import { FaNodeJs } from "react-icons/fa"
+import { Categories } from "@/types/About"
 
-// Define o tipo para cada tecnologia
-export interface Technology {
-  name: string
-  icon: IconType
-  className?: string
-}
-
-// Define o tipo para categorias com listas de tecnologias
-export interface Categories {
-  [category: string]: Technology[]
-}
-
-// Estrutura de dados com categorias
 export const skillCategories: Categories = {
   "Front-End": [
     { name: "JavaScript", icon: DiJavascript1, className: "text-yellow-400" },

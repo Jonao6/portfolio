@@ -1,7 +1,11 @@
 import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 
+import Footer from "@/components/sections/Footer"
+import Header from "@/components/sections/Header"
+import { Suspense } from "react"
 import "./globals.css"
+import Loading from "./loading"
 
 export const metadata: Metadata = {
   title: "Jonatas Eduardo | Desenvolvedor Fullstack",
@@ -25,8 +29,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jonatas Eduardo | Desenvolvedor Fullstack",
     description:
-      "Conheça o portfólio de Jonatas Eduardo — desenvolvedor fullstack especializado em tecnologias modernas como React, Next.js e Node.js.",
-    siteName: "Portfólio de Jonatass Eduardo",
+      "Conheça o portfólio de Jonatas Eduardo — Desenvolvedor Fullstack especializado em tecnologias modernas como React, Next.js e Node.js.",
+    siteName: "Portfólio de Jonatas Eduardo",
     type: "website",
     locale: "pt_BR",
   },
@@ -52,7 +56,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${jetBrains_Mono.variable}`}>
-        {children}
+        <Suspense fallback={<Loading />}>
+          <Header />
+          {children}
+          <Footer />
+        </Suspense>
       </body>
     </html>
   )

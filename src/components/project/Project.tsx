@@ -1,28 +1,14 @@
-import { Tag } from "./Tag"
-import ImageHover from "./ImageHover"
-
-export interface ProjectProps {
-  project: {
-    title: string
-    content: string[]
-    image: string
-    url: string
-    tags: string[]
-    demo: string
-  }
-  isInverted: boolean
-}
+import { ProjectProps } from "@/types/Project"
+import ImageHover from "../ui/ImageHover"
+import { Tag } from "../ui/Tag"
 
 export default function Project({ project, isInverted }: ProjectProps) {
   const { title, content, image, url, demo, tags } = project
-
   return (
     <div
       className={`flex ${
-        isInverted
-          ? "flex-col-reverse md:flex-row-reverse"
-          : " flex-col md:flex-row"
-      } justify-between gap-40 mb-10`}
+        isInverted ? "flex-col md:flex-row-reverse" : " flex-col md:flex-row"
+      } justify-between gap-20 md:gap-40 mb-10`}
     >
       <ImageHover image={image} title={title} demo={demo} url={url} />
       <div className="flex flex-col items-center justify-between px-2.5 w-fit gap-2.5 text-justify">

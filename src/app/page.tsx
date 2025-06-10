@@ -1,22 +1,18 @@
-import Header from "@/components/Header"
-import HeroSection from "@/components/HeroSection"
-import AboutSection from "@/components/AboutSection"
-import ProjectSection from "@/components/ProjectSection"
-import ContactsSection from "@/components/ContactsSection"
-import Footer from "@/components/Footer"
-import GsapWrapper from "@/components/GsapWrapper"
+import ContactsSection from "@/components/sections/ContactsSection"
+import HeroSection from "@/components/sections/HeroSection"
+import ProjectSection from "@/components/sections/ProjectSection"
+import AboutSection from "@/components/sections/AboutSection"
+import ReactLenis from "lenis/react"
 
 export default function Home() {
   return (
-    <GsapWrapper>
-      <main className="flex flex-col items-center px-[15%]">
-        <Header />
+    <main className="flex flex-col w-full justify-center items-center px-[15%]">
+      <ReactLenis root>
         <HeroSection />
         <AboutSection />
         <ProjectSection />
         <ContactsSection />
-        <Footer />
-      </main>
-    </GsapWrapper>
+      </ReactLenis>
+    </main>
   )
 }
