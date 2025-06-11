@@ -12,7 +12,6 @@ export default async function AboutSection() {
       <h1 className="font-extrabold font-mono text-white text-4xl sm:text-5xl md:text-6xl">
         Sobre
       </h1>
-
       <div className="flex flex-col lg:flex-row py-5 gap-10">
         <div className="w-full lg:w-1/2 font-sans text-base text-gray-300 tracking-widest leading-8 sm:leading-10 border-b-2 lg:border-b-0 lg:border-r-2 border-gray-400 pr-0 lg:pr-10 pb-6 lg:pb-0">
           {about.paragrafos.map((p: string, i: number) => (

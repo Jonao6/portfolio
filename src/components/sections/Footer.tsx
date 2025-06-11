@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import { scrollToSection } from "@/lib/scrollToSection"
-
+import { useRouter } from "next/router"
 export default function Footer() {
   return (
     <footer className="w-full border-t border-neutral-100 px-4 sm:px-8 md:px-20 py-4 ">
@@ -26,8 +26,10 @@ export default function Footer() {
               Terms of Use
             </Link>
             <Link
-              href="/PrivacyPolicy"
+              target="_blank"
+              href="https://www.iubenda.com/privacy-policy/59626681"
               className="hover:text-neutral-100 transition-colors"
+              rel="noopener noreferrer"
             >
               Privacy Policy
             </Link>

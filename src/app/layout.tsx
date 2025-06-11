@@ -1,8 +1,5 @@
 import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
-
-import Footer from "@/components/sections/Footer"
-import Header from "@/components/sections/Header"
 import { Suspense } from "react"
 import "./globals.css"
 import Loading from "./loading"
@@ -11,7 +8,8 @@ export const metadata: Metadata = {
   title: "Jonatas Eduardo | Desenvolvedor Fullstack",
   description:
     "Portfólio de Jonatas Eduardo — desenvolvedor fullstack com foco em aplicações web modernas, escaláveis e com ótima experiência de usuário.",
-  keywords: [
+    icons: "/favicon.ico",
+    keywords: [
     "Jonatas Eduardo",
     "Desenvolvedor Fullstack",
     "Portfólio",
@@ -56,11 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${jetBrains_Mono.variable}`}>
-        <Suspense fallback={<Loading />}>
-          <Header />
-          {children}
-          <Footer />
-        </Suspense>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
       </body>
     </html>
   )
