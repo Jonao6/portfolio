@@ -9,31 +9,18 @@ Portfólio de Jonatas Eduardo — desenvolvedor fullstack com foco em aplicaçõ
 ## Tecnologias
 
 ### Front-End
-- **JavaScript** - Linguagem de programação
 - **TypeScript** - Superset tipado do JavaScript
 - **React** - Biblioteca para interfaces
 - **Next.js** - Framework React fullstack
 - **Tailwind CSS** - Framework CSS utilitário
-
-### Back-End
-- **Node.js** - Ambiente de execução JavaScript
-- **PostgreSQL** - Banco de dados relacional
-- **MySQL** - Sistema de gerenciamento de banco de dados
-- **MongoDB** - Banco de dados NoSQL
-- **Prisma** - ORM para Node.js
-
+- 
 ### Ferramentas & DevOps
 - **Zod** - Validação de schemas TypeScript
 - **Git** - Controle de versão
 - **GitHub** - Plataforma de hospedagem de código
 - **GitHub Actions** - CI/CD
 - **Vercel** - Plataforma de deploy
-- **Docker** - Containerização
 - **Figma** - Design de interfaces
-
-### Animações
-- **GSAP** - Biblioteca de animações JavaScript
-- **Lenis** - Smooth scrolling
 
 ## Estrutura do Projeto
 
