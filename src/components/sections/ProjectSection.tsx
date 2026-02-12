@@ -2,8 +2,8 @@ import { ProjectProps } from "@/types/Project"
 import Project from "../project/Project"
 
 export default async function ProjectSection() {
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`)
-  // const data: ProjectProps[] = await res.json()
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL ||  "http://localhost:3000"}/api/projects`)
+  const data: ProjectProps[] = await res.json()
   
   return (
     <section className="flex flex-col w-full" id="projetos">
@@ -12,7 +12,7 @@ export default async function ProjectSection() {
           Projetos
         </h1>
       </div>
-      {/* {data.map((proj, index) => (
+      {data.map((proj, index) => (
         <div
           className={`
       pb-8 md:pb-10
@@ -23,7 +23,7 @@ export default async function ProjectSection() {
         >
           <Project project={proj.project} isInverted />
         </div>
-        ))} */}
+        ))}
     </section>
   )
 }

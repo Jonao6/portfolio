@@ -3,7 +3,7 @@ import { NextRequest } from "next/server"
 
 export async function GET(request: NextRequest) {
   const project = await fetchProject(
-    "https://raw.githubusercontent.com/Jonao6/test-googlemaps-api/main/project.json"
+    "https://raw.githubusercontent.com/Jonao6/ecommerce-monorepo/master/project.json"
   )
   const validProjects = project ? [project] : []
 
